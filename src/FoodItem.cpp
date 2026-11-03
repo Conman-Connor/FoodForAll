@@ -69,3 +69,45 @@ bool compareFood(const FoodItem& a,
 
     return false;
 }
+ 
+string FoodItem::getName() const {
+    return name;
+}
+
+string FoodItem::getStorageCondition() const {
+    return storageCondition;
+}
+
+double FoodItem::getTemperature() const {
+    return temperature;
+}
+
+int FoodItem::getHumidity() const {
+    return humidity;
+}
+
+string FoodItem::getPackaging() const {
+    return packaging;
+}
+
+string FoodItem::getPurchaseDate() const {
+    return purchaseDate;
+}
+
+int FoodItem::getExpiryDays() const {
+    return expiryDays;
+}
+
+int FoodItem::getQuantity() const {
+    return quantity;
+}
+
+string FoodItem::getExpirationDate() const {
+    return expirationDate;
+}
+
+string FoodItem::getPickupDeadline() const {
+    return pickupDeadline;
+}
+
+
