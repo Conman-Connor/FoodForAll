@@ -38,7 +38,7 @@ int compareDates(const string& a, const string& b) {
     int dayB = stoi(b.substr(3, 2));
     int yearB = stoi(b.substr(6, 4));
 
-    if (yearA < yearB) return -1;git
+    if (yearA < yearB) return -1;
     if (yearA > yearB) return 1;
 
     if (monthA < monthB) return -1;
