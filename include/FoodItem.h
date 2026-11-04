@@ -1,71 +1,50 @@
 #ifndef FOODITEM_H
 #define FOODITEM_H
-
 #include <string>
 
 using namespace std;
 
+
+
 struct FoodItem {
     string name;
-    string expirationDate;  // MM/DD/YYYY
-    string pickupDeadline;  // MM/DD/YYYY
+    string storageCondition;
+    double temperature;
+    int humidity;
+    string packaging;
+    string purchaseDate;
+    int expiryDays;
     int quantity;
+    string expirationDate;
+    string pickupDeadline;
 
-    FoodItem() {
-        name = "";
-        expirationDate = "";
-        pickupDeadline = "";
-        quantity = 0;
-    }
+    FoodItem();
+    FoodItem(string n, string storage, double temp, int humid, string pack, string purchase, int days, int q, string exp, string pickup);
 
-    FoodItem(string n, string exp, string pickup, int q) {
-        name = n;
-        expirationDate = exp;
-        pickupDeadline = pickup;
-        quantity = q;
-    }
+    string getName() const;
+    string getStorageCondition() const;
+    double getTemperature() const;
+    int getHumidity() const;
+    string getPackaging() const;
+    string getPurchaseDate() const;
+    int getExpiryDays() const;
+    int getQuantity() const;
+    string getExpirationDate() const;
+    string getPickupDeadline() const;
+
 };
 
 enum SortField {
     BY_EXPIRATION = 1,
     BY_PICKUP = 2,
     BY_QUANTITY = 3
+
+
 };
 
-inline int compareDates(const string& a, const string& b) {
-    int monthA = stoi(a.substr(0, 2));
-    int dayA = stoi(a.substr(3, 2));
-    int yearA = stoi(a.substr(6, 4));
+int compareDates(const string& a, const string& b);
+bool compareFood(const FoodItem& a, const FoodItem& b, SortField field);
 
-    int monthB = stoi(b.substr(0, 2));
-    int dayB = stoi(b.substr(3, 2));
-    int yearB = stoi(b.substr(6, 4));
 
-    if (yearA < yearB) return -1;
-    if (yearA > yearB) return 1;
-    if (monthA < monthB) return -1;
-    if (monthA > monthB) return 1;
-    if (dayA < dayB) return -1;
-    if (dayA > dayB) return 1;
-
-    return 0;
-}
-
-inline bool compareFood(const FoodItem& a,
-                        const FoodItem& b,
-                        SortField field) {
-    if (field == BY_EXPIRATION) {
-        return compareDates(a.expirationDate, b.expirationDate) < 0;
-    }
-    else if (field == BY_PICKUP) {
-        return compareDates(a.pickupDeadline, b.pickupDeadline) < 0;
-    }
-    else if (field == BY_QUANTITY) {
-        return a.quantity > b.quantity;
-    }
-
-    return false;
-}
 
 #endif
-
