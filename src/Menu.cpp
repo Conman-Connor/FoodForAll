@@ -116,7 +116,7 @@ void Menu::runMergeSort(const vector<FoodItem>& donations) {
 
     
 
-// Run Quick Sort independently
+
 void Menu::runQuickSort(const vector<FoodItem>& donations) {
      int choice;
     displaySortingMenu();
