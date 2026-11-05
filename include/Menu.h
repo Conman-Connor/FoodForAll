@@ -15,3 +15,5 @@ class Menu
         static void runQuickSort(const std::vector<FoodItem>& donations);
         static void comparePerformance(const std::vector<FoodItem>& donations);
 };
+
+#endif

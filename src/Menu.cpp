@@ -82,15 +82,15 @@ void Menu::runMergeSort(const vector<FoodItem>& donations) {
 
     if(choice == 1)
     {
-        field = SortField::ExpirationDate;
+        field = SortField::BY_EXPIRATION;
     }
     else if(choice == 2)
     {
-        field = SortField::Quantity;
+        field = SortField::BY_QUANTITY;
     }
     else if(choice == 3)
     {
-        field = SortField::PickupDeadline;
+        field = SortField::BY_PICKUP;
     }
     else
     {
@@ -106,11 +106,11 @@ void Menu::runMergeSort(const vector<FoodItem>& donations) {
     cout << "\nMerge Sort completed successfully!\n";
     cout << "Records sorted: " << sortedData.size() << endl;
 
-    for (int i = 0; i < sortedData.size(); i++) {
-    cout << "Name: " << sortedData[i].getName() << endl;
-    cout << "Quantity: " << sortedData[i].getQuantity() << endl;
-    cout << "Expiration Date: " << sortedData[i].getExpirationDate() << endl;
-}
+//     for (int i = 0; i < sortedData.size(); i++) {
+//     cout << "Name: " << sortedData[i].getName() << endl;
+//     cout << "Quantity: " << sortedData[i].getQuantity() << endl;
+//     cout << "Expiration Date: " << sortedData[i].getExpirationDate() << endl;
+// }
 }
 
 
@@ -125,15 +125,15 @@ void Menu::runQuickSort(const vector<FoodItem>& donations) {
 
     if(choice == 1)
     {
-        field = SortField::ExpirationDate;
+        field = SortField::BY_EXPIRATION;
     }
     else if(choice == 2)
     {
-        field = SortField::Quantity;
+        field = SortField::BY_QUANTITY;
     }
     else if(choice == 3)
     {
-        field = SortField::PickupDeadline;
+        field = SortField::BY_PICKUP;
     }
     else
     {
@@ -149,11 +149,11 @@ void Menu::runQuickSort(const vector<FoodItem>& donations) {
     cout << "\nQuick Sort completed successfully!\n";
     cout << "Records sorted: " << sortedData.size() << endl;
 
-    for (int i = 0; i < sortedData.size(); i++) {
-    cout << "Name: " << sortedData[i].getName() << endl;
-    cout << "Quantity: " << sortedData[i].getQuantity() << endl;
-    cout << "Expiration Date: " << sortedData[i].getExpirationDate() << endl;
-}
+//     for (int i = 0; i < sortedData.size(); i++) {
+//     cout << "Name: " << sortedData[i].getName() << endl;
+//     cout << "Quantity: " << sortedData[i].getQuantity() << endl;
+//     cout << "Expiration Date: " << sortedData[i].getExpirationDate() << endl;
+// }
 }
 
 void Menu::comparePerformance(const vector<FoodItem>& donations) {
@@ -165,13 +165,13 @@ void Menu::comparePerformance(const vector<FoodItem>& donations) {
     SortField field;
 
     if (choice == 1) {
-        field = SortField::ExpirationDate;
+        field = SortField::BY_EXPIRATION;
         }
         else if (choice == 2) {
-    field = SortField::Quantity;
+    field = SortField::BY_QUANTITY;
             }
         else if (choice == 3) {
-     field = SortField::PickupDeadline;
+     field = SortField::BY_PICKUP;
         }
         else if (choice == 4) {
     return;
