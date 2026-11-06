@@ -106,10 +106,11 @@ void Menu::runMergeSort(const vector<FoodItem>& donations) {
     cout << "\nMerge Sort completed successfully!\n";
     cout << "Records sorted: " << sortedData.size() << endl;
 
-//     for (int i = 0; i < sortedData.size(); i++) {
-//     cout << "Name: " << sortedData[i].getName() << endl;
-//     cout << "Quantity: " << sortedData[i].getQuantity() << endl;
-//     cout << "Expiration Date: " << sortedData[i].getExpirationDate() << endl;
+    // for (int i = 0; i < sortedData.size(); i++) {
+     //   cout << "Name: " << sortedData[i].getName()
+    //<< " | Quantity: " << sortedData[i].getQuantity()
+   //<< " | Expiration Date: " << sortedData[i].getExpirationDate()
+     //    << " | Pickup Date: " << sortedData[i].getPickupDeadline() << endl;
 // }
 }
 
@@ -149,11 +150,12 @@ void Menu::runQuickSort(const vector<FoodItem>& donations) {
     cout << "\nQuick Sort completed successfully!\n";
     cout << "Records sorted: " << sortedData.size() << endl;
 
-//     for (int i = 0; i < sortedData.size(); i++) {
-//     cout << "Name: " << sortedData[i].getName() << endl;
-//     cout << "Quantity: " << sortedData[i].getQuantity() << endl;
-//     cout << "Expiration Date: " << sortedData[i].getExpirationDate() << endl;
-// }
+    //for (int i = 0; i < sortedData.size(); i++) {
+     //cout << "Name: " << sortedData[i].getName()
+  //  << " | Quantity: " << sortedData[i].getQuantity()
+    //  << " | Expiration Date: " << sortedData[i].getExpirationDate()
+      // << " | Pickup Date: " << sortedData[i].getPickupDeadline() << endl;
+    //}
 }
 
 void Menu::comparePerformance(const vector<FoodItem>& donations) {
